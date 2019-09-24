@@ -3,7 +3,7 @@
 # ------------------------------------------------------
 
 TEMPLATE = app
-TARGET = Dofus_Helper
+TARGET = Twitch_Donwloader
 DESTDIR = ./x64/Debug
 QT += core xml sql opengl network gui svg multimedia uitools location qml webchannel websockets quickwidgets quick openglextensions qmltest quickcontrols2 testlib
 QT += widgets
