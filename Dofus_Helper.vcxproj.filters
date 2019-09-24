@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files\ScreenSelection">
+      <UniqueIdentifier>{53f9ec54-c420-4482-9da6-07be4177d49e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ScreenSelection">
+      <UniqueIdentifier>{4bfbefa1-e080-4575-b3ec-c07140204653}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenSelectionControllerQML.cpp">
+      <Filter>Source Files\ScreenSelection</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenshotProviderSelectionScreen.cpp">
+      <Filter>Source Files\ScreenSelection</Filter>
+    </ClCompile>
+    <ClCompile Include="DofusHelperManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ClickableLabel.cpp">
+      <Filter>Source Files\ScreenSelection</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ScreenSelectionControllerQML.h">
+      <Filter>Header Files\ScreenSelection</Filter>
+    </ClInclude>
+    <ClInclude Include="ClickableLabel.h">
+      <Filter>Header Files\ScreenSelection</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="ScreenshotProviderSelectionScreen.h">
+      <Filter>Header Files\ScreenSelection</Filter>
+    </QtMoc>
+    <QtMoc Include="DofusHelperManager.h">
+      <Filter>Source Files</Filter>
+    </QtMoc>
+  </ItemGroup>
+</Project>

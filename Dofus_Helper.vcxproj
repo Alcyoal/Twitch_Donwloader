@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B12702AD-ABFB-343A-A199-8E24837244A3}</ProjectGuid>
+    <RootNamespace>Dofus_Helper</RootNamespace>
+    <Keyword>Qt4VSv1.0</Keyword>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformMinVersion>10.0.17763.0</WindowsTargetPlatformMinVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <PlatformToolset>v142</PlatformToolset>
+    <OutputDirectory>x64\Debug\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>debug\</IntermediateDirectory>
+    <PrimaryOutput>Dofus_Helper</PrimaryOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <PlatformToolset>v142</PlatformToolset>
+    <OutputDirectory>x64\Debug\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>release\</IntermediateDirectory>
+    <PrimaryOutput>Dofus_Helper</PrimaryOutput>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <PropertyGroup Condition="'$(QtMsBuild)'=='' or !Exists('$(QtMsBuild)\qt.targets')">
+    <QtMsBuild>$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+  </PropertyGroup>
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.props')">
+    <Import Project="$(QtMsBuild)\qt.props" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">x64\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Dofus_Helper</TargetName>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</IgnoreImportLibrary>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">x64\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Dofus_Helper</TargetName>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</IgnoreImportLibrary>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <IncludePath>$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(IncludePath)</IncludePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;./GeneratedFiles/$(ConfigurationName);$(QTDIR)\include;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtSvg;$(QTDIR)\include\QtUiTools;$(QTDIR)\include\QtQuickWidgets;$(QTDIR)\include\QtQuickTest;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtMultimedia;$(QTDIR)\include\QtLocation;$(QTDIR)\include\QtPositioningQuick;$(QTDIR)\include\QtQuickControls2;$(QTDIR)\include\QtQuick;$(QTDIR)\include\QtOpenGLExtensions;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtXml;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtWebChannel;$(QTDIR)\include\QtQml;$(QTDIR)\include\QtWebSockets;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtPositioning;$(QTDIR)\include\QtTest;$(QTDIR)\include\QtCore;\include;$(QTDIR)\mkspecs\win32-msvc;C:\opencv\build\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>debug\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;4467;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>debug\</ObjectFileName>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_CONSOLE;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;_UNICODE;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_DLL;QT_LOCATION_LIB;QT_MULTIMEDIA_LIB;QT_NETWORK_LIB;QT_OPENGL_LIB;QT_OPENGLEXTENSIONS_LIB;QT_QML_LIB;QT_QUICK_LIB;QT_QUICKWIDGETS_LIB;QT_QUICKCONTROLS2_LIB;QT_QMLTEST_LIB;QT_SQL_LIB;QT_SVG_LIB;QT_TESTLIB_LIB;QT_UITOOLS_LIB;QT_WEBCHANNEL_LIB;QT_WEBSOCKETS_LIB;QT_XML_LIB;QT_OPENGL_LIB;QT_SVG_LIB;QT_UITOOLS_LIB;QT_QUICKWIDGETS_LIB;QT_QMLTEST_LIB;QT_WIDGETS_LIB;QT_MULTIMEDIA_LIB;QT_LOCATION_LIB;QT_POSITIONINGQUICK_LIB;QT_QUICKCONTROLS2_LIB;QT_QUICK_LIB;QT_OPENGLEXTENSIONS_LIB;QT_GUI_LIB;QT_XML_LIB;QT_SQL_LIB;QT_WEBCHANNEL_LIB;QT_QML_LIB;QT_WEBSOCKETS_LIB;QT_NETWORK_LIB;QT_POSITIONING_LIB;QT_TESTLIB_LIB;QT_CORE_LIB;QT_TESTCASE_BUILDDIR=".";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>"C:\Program Files (x86)\Windows Kits\10\lib\10.0.17763.0\um\x64\opengl32.lib";"C:\Program Files (x86)\Windows Kits\10\lib\10.0.17763.0\um\x64\glu32.lib";opencv_world411d.lib;$(QTDIR)\lib\Qt5OpenGLd.lib;$(QTDIR)\lib\Qt5Svgd.lib;$(QTDIR)\lib\Qt5UiToolsd.lib;$(QTDIR)\lib\Qt5QuickWidgetsd.lib;$(QTDIR)\lib\Qt5QuickTestd.lib;$(QTDIR)\lib\Qt5Widgetsd.lib;$(QTDIR)\lib\Qt5Multimediad.lib;$(QTDIR)\lib\Qt5Locationd.lib;$(QTDIR)\lib\Qt5PositioningQuickd.lib;$(QTDIR)\lib\Qt5QuickControls2d.lib;$(QTDIR)\lib\Qt5Quickd.lib;$(QTDIR)\lib\Qt5OpenGLExtensionsd.lib;$(QTDIR)\lib\Qt5Guid.lib;$(QTDIR)\lib\Qt5Xmld.lib;$(QTDIR)\lib\Qt5Sqld.lib;$(QTDIR)\lib\Qt5WebChanneld.lib;$(QTDIR)\lib\Qt5Qmld.lib;$(QTDIR)\lib\Qt5WebSocketsd.lib;$(QTDIR)\lib\Qt5Networkd.lib;$(QTDIR)\lib\Qt5Positioningd.lib;$(QTDIR)\lib\Qt5Testd.lib;$(QTDIR)\lib\Qt5Cored.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;C:\openssl\lib;C:\Utils\postgresql\pgsql\lib;C:\opencv\build\x64\vc15\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <OutputFile>$(OutDir)\Dofus_Helper.exe</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Console</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <EntryPointSymbol>
+      </EntryPointSymbol>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_CONSOLE;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;_UNICODE;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_DLL;QT_LOCATION_LIB;QT_MULTIMEDIA_LIB;QT_NETWORK_LIB;QT_OPENGL_LIB;QT_OPENGLEXTENSIONS_LIB;QT_QML_LIB;QT_QUICK_LIB;QT_QUICKWIDGETS_LIB;QT_QUICKCONTROLS2_LIB;QT_QMLTEST_LIB;QT_SQL_LIB;QT_SVG_LIB;QT_TESTLIB_LIB;QT_UITOOLS_LIB;QT_WEBCHANNEL_LIB;QT_WEBSOCKETS_LIB;QT_XML_LIB;QT_OPENGL_LIB;QT_SVG_LIB;QT_UITOOLS_LIB;QT_QUICKWIDGETS_LIB;QT_QMLTEST_LIB;QT_WIDGETS_LIB;QT_MULTIMEDIA_LIB;QT_LOCATION_LIB;QT_POSITIONINGQUICK_LIB;QT_QUICKCONTROLS2_LIB;QT_QUICK_LIB;QT_OPENGLEXTENSIONS_LIB;QT_GUI_LIB;QT_XML_LIB;QT_SQL_LIB;QT_WEBCHANNEL_LIB;QT_QML_LIB;QT_WEBSOCKETS_LIB;QT_NETWORK_LIB;QT_POSITIONING_LIB;QT_TESTLIB_LIB;QT_CORE_LIB;QT_TESTCASE_BUILDDIR=".";_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <QtMoc>
+      <QTDIR>$(QTDIR)</QTDIR>
+      <OutputFile>GeneratedFiles\moc_%(Filename).cpp</OutputFile>
+      <Define>UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;_UNICODE;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_DLL;QT_LOCATION_LIB;QT_MULTIMEDIA_LIB;QT_NETWORK_LIB;QT_OPENGL_LIB;QT_OPENGLEXTENSIONS_LIB;QT_QML_LIB;QT_QUICK_LIB;QT_QUICKWIDGETS_LIB;QT_QUICKCONTROLS2_LIB;QT_QMLTEST_LIB;QT_SQL_LIB;QT_SVG_LIB;QT_TESTLIB_LIB;QT_UITOOLS_LIB;QT_WEBCHANNEL_LIB;QT_WEBSOCKETS_LIB;QT_XML_LIB;QT_OPENGL_LIB;QT_SVG_LIB;QT_UITOOLS_LIB;QT_QUICKWIDGETS_LIB;QT_QMLTEST_LIB;QT_WIDGETS_LIB;QT_MULTIMEDIA_LIB;QT_LOCATION_LIB;QT_POSITIONINGQUICK_LIB;QT_QUICKCONTROLS2_LIB;QT_QUICK_LIB;QT_OPENGLEXTENSIONS_LIB;QT_GUI_LIB;QT_XML_LIB;QT_SQL_LIB;QT_WEBCHANNEL_LIB;QT_QML_LIB;QT_WEBSOCKETS_LIB;QT_NETWORK_LIB;QT_POSITIONING_LIB;QT_TESTLIB_LIB;QT_CORE_LIB;QT_TESTCASE_BUILDDIR=.</Define>
+      <CompilerFlavor>msvc</CompilerFlavor>
+      <Include>./GeneratedFiles/$(ConfigurationName)/moc_predefs.h</Include>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <InputFile>%(FullPath)</InputFile>
+      <DynamicSource>output</DynamicSource>
+      <IncludePath>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;$(QTDIR)\mkspecs/win32-msvc;.;./GeneratedFiles/$(ConfigurationName);$(QTDIR)\include;$(QTDIR)\include/QtOpenGL;$(QTDIR)\include/QtSvg;$(QTDIR)\include/QtUiTools;$(QTDIR)\include/QtQuickWidgets;$(QTDIR)\include/QtQuickTest;$(QTDIR)\include/QtWidgets;$(QTDIR)\include/QtMultimedia;$(QTDIR)\include/QtLocation;$(QTDIR)\include/QtPositioningQuick;$(QTDIR)\include/QtQuickControls2;$(QTDIR)\include/QtQuick;$(QTDIR)\include/QtOpenGLExtensions;$(QTDIR)\include/QtGui;$(QTDIR)\include/QtANGLE;$(QTDIR)\include/QtXml;$(QTDIR)\include/QtSql;$(QTDIR)\include/QtWebChannel;$(QTDIR)\include/QtQml;$(QTDIR)\include/QtWebSockets;$(QTDIR)\include/QtNetwork;$(QTDIR)\include/QtPositioning;$(QTDIR)\include/QtTest;$(QTDIR)\include/QtCore;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.20.27508\ATLMFC\include;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.20.27508\include;C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\ucrt;C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\shared;C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\um;C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\winrt;C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\cppwinrt</IncludePath>
+    </QtMoc>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;./GeneratedFiles/$(ConfigurationName);$(QTDIR)\include;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtSvg;$(QTDIR)\include\QtUiTools;$(QTDIR)\include\QtQuickWidgets;$(QTDIR)\include\QtQuickTest;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtMultimedia;$(QTDIR)\include\QtLocation;$(QTDIR)\include\QtPositioningQuick;$(QTDIR)\include\QtQuickControls2;$(QTDIR)\include\QtQuick;$(QTDIR)\include\QtOpenGLExtensions;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtXml;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtWebChannel;$(QTDIR)\include\QtQml;$(QTDIR)\include\QtWebSockets;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtPositioning;$(QTDIR)\include\QtTest;$(QTDIR)\include\QtCore;\include;$(QTDIR)\mkspecs\win32-msvc;C:\opencv\build\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>release\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;4467;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>release\</ObjectFileName>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>_CONSOLE;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;_UNICODE;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_DLL;QT_LOCATION_LIB;QT_MULTIMEDIA_LIB;QT_NETWORK_LIB;QT_OPENGL_LIB;QT_OPENGLEXTENSIONS_LIB;QT_QML_LIB;QT_QUICK_LIB;QT_QUICKWIDGETS_LIB;QT_QUICKCONTROLS2_LIB;QT_QMLTEST_LIB;QT_SQL_LIB;QT_SVG_LIB;QT_TESTLIB_LIB;QT_UITOOLS_LIB;QT_WEBCHANNEL_LIB;QT_WEBSOCKETS_LIB;QT_XML_LIB;QT_NO_DEBUG;QT_OPENGL_LIB;QT_SVG_LIB;QT_UITOOLS_LIB;QT_QUICKWIDGETS_LIB;QT_QMLTEST_LIB;QT_WIDGETS_LIB;QT_MULTIMEDIA_LIB;QT_LOCATION_LIB;QT_POSITIONINGQUICK_LIB;QT_QUICKCONTROLS2_LIB;QT_QUICK_LIB;QT_OPENGLEXTENSIONS_LIB;QT_GUI_LIB;QT_XML_LIB;QT_SQL_LIB;QT_WEBCHANNEL_LIB;QT_QML_LIB;QT_WEBSOCKETS_LIB;QT_NETWORK_LIB;QT_POSITIONING_LIB;QT_TESTLIB_LIB;QT_CORE_LIB;QT_TESTCASE_BUILDDIR=".";NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <ProgramDataBaseFileName>
+      </ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>"C:\Program Files (x86)\Windows Kits\10\lib\10.0.17763.0\um\x64\opengl32.lib";"C:\Program Files (x86)\Windows Kits\10\lib\10.0.17763.0\um\x64\glu32.lib";opencv_world411.lib;$(QTDIR)\lib\Qt5OpenGL.lib;$(QTDIR)\lib\Qt5Svg.lib;$(QTDIR)\lib\Qt5UiTools.lib;$(QTDIR)\lib\Qt5QuickWidgets.lib;$(QTDIR)\lib\Qt5QuickTest.lib;$(QTDIR)\lib\Qt5Widgets.lib;$(QTDIR)\lib\Qt5Multimedia.lib;$(QTDIR)\lib\Qt5Location.lib;$(QTDIR)\lib\Qt5PositioningQuick.lib;$(QTDIR)\lib\Qt5QuickControls2.lib;$(QTDIR)\lib\Qt5Quick.lib;$(QTDIR)\lib\Qt5OpenGLExtensions.lib;$(QTDIR)\lib\Qt5Gui.lib;$(QTDIR)\lib\Qt5Xml.lib;$(QTDIR)\lib\Qt5Sql.lib;$(QTDIR)\lib\Qt5WebChannel.lib;$(QTDIR)\lib\Qt5Qml.lib;$(QTDIR)\lib\Qt5WebSockets.lib;$(QTDIR)\lib\Qt5Network.lib;$(QTDIR)\lib\Qt5Positioning.lib;$(QTDIR)\lib\Qt5Test.lib;$(QTDIR)\lib\Qt5Core.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;C:\openssl\lib;C:\Utils\postgresql\pgsql\lib;C:\opencv\build\x64\vc15\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <LinkIncremental>false</LinkIncremental>
+      <OutputFile>$(OutDir)\Dofus_Helper.exe</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_CONSOLE;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;_UNICODE;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_DLL;QT_LOCATION_LIB;QT_MULTIMEDIA_LIB;QT_NETWORK_LIB;QT_OPENGL_LIB;QT_OPENGLEXTENSIONS_LIB;QT_QML_LIB;QT_QUICK_LIB;QT_QUICKWIDGETS_LIB;QT_QUICKCONTROLS2_LIB;QT_QMLTEST_LIB;QT_SQL_LIB;QT_SVG_LIB;QT_TESTLIB_LIB;QT_UITOOLS_LIB;QT_WEBCHANNEL_LIB;QT_WEBSOCKETS_LIB;QT_XML_LIB;QT_NO_DEBUG;QT_OPENGL_LIB;QT_SVG_LIB;QT_UITOOLS_LIB;QT_QUICKWIDGETS_LIB;QT_QMLTEST_LIB;QT_WIDGETS_LIB;QT_MULTIMEDIA_LIB;QT_LOCATION_LIB;QT_POSITIONINGQUICK_LIB;QT_QUICKCONTROLS2_LIB;QT_QUICK_LIB;QT_OPENGLEXTENSIONS_LIB;QT_GUI_LIB;QT_XML_LIB;QT_SQL_LIB;QT_WEBCHANNEL_LIB;QT_QML_LIB;QT_WEBSOCKETS_LIB;QT_NETWORK_LIB;QT_POSITIONING_LIB;QT_TESTLIB_LIB;QT_CORE_LIB;QT_TESTCASE_BUILDDIR=".";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <QtMoc>
+      <QTDIR>$(QTDIR)</QTDIR>
+      <OutputFile>GeneratedFiles\moc_%(Filename).cpp</OutputFile>
+      <Define>UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;_UNICODE;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_DLL;QT_LOCATION_LIB;QT_MULTIMEDIA_LIB;QT_NETWORK_LIB;QT_OPENGL_LIB;QT_OPENGLEXTENSIONS_LIB;QT_QML_LIB;QT_QUICK_LIB;QT_QUICKWIDGETS_LIB;QT_QUICKCONTROLS2_LIB;QT_QMLTEST_LIB;QT_SQL_LIB;QT_SVG_LIB;QT_TESTLIB_LIB;QT_UITOOLS_LIB;QT_WEBCHANNEL_LIB;QT_WEBSOCKETS_LIB;QT_XML_LIB;QT_NO_DEBUG;QT_OPENGL_LIB;QT_SVG_LIB;QT_UITOOLS_LIB;QT_QUICKWIDGETS_LIB;QT_QMLTEST_LIB;QT_WIDGETS_LIB;QT_MULTIMEDIA_LIB;QT_LOCATION_LIB;QT_POSITIONINGQUICK_LIB;QT_QUICKCONTROLS2_LIB;QT_QUICK_LIB;QT_OPENGLEXTENSIONS_LIB;QT_GUI_LIB;QT_XML_LIB;QT_SQL_LIB;QT_WEBCHANNEL_LIB;QT_QML_LIB;QT_WEBSOCKETS_LIB;QT_NETWORK_LIB;QT_POSITIONING_LIB;QT_TESTLIB_LIB;QT_CORE_LIB;QT_TESTCASE_BUILDDIR=.</Define>
+      <CompilerFlavor>msvc</CompilerFlavor>
+      <Include>./GeneratedFiles/$(ConfigurationName)/moc_predefs.h</Include>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <InputFile>%(FullPath)</InputFile>
+      <DynamicSource>output</DynamicSource>
+      <IncludePath>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;$(QTDIR)\mkspecs/win32-msvc;.;./GeneratedFiles/$(ConfigurationName);$(QTDIR)\include;$(QTDIR)\include/QtOpenGL;$(QTDIR)\include/QtSvg;$(QTDIR)\include/QtUiTools;$(QTDIR)\include/QtQuickWidgets;$(QTDIR)\include/QtQuickTest;$(QTDIR)\include/QtWidgets;$(QTDIR)\include/QtMultimedia;$(QTDIR)\include/QtLocation;$(QTDIR)\include/QtPositioningQuick;$(QTDIR)\include/QtQuickControls2;$(QTDIR)\include/QtQuick;$(QTDIR)\include/QtOpenGLExtensions;$(QTDIR)\include/QtGui;$(QTDIR)\include/QtANGLE;$(QTDIR)\include/QtXml;$(QTDIR)\include/QtSql;$(QTDIR)\include/QtWebChannel;$(QTDIR)\include/QtQml;$(QTDIR)\include/QtWebSockets;$(QTDIR)\include/QtNetwork;$(QTDIR)\include/QtPositioning;$(QTDIR)\include/QtTest;$(QTDIR)\include/QtCore;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.20.27508\ATLMFC\include;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.20.27508\include;C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\ucrt;C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\shared;C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\um;C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\winrt;C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\cppwinrt</IncludePath>
+    </QtMoc>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="ClickableLabel.cpp" />
+    <ClCompile Include="ScreenSelectionControllerQML.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="DofusHelperManager.cpp" />
+    <ClCompile Include="ScreenshotProviderSelectionScreen.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="ClickableLabel.h" />
+    <ClInclude Include="ScreenSelectionControllerQML.h" />
+    <QtMoc Include="DofusHelperManager.h" />
+    <QtMoc Include="ScreenshotProviderSelectionScreen.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets" />
+</Project>
